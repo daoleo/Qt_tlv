@@ -5,6 +5,11 @@
 class TlvPacket
 {
 public:
+    /*
+     * Add by wuhong
+     *      函数定义写在.c  文件中，否则会增加编译后代码的大小
+     *      写在.h 中相当于内联函数
+     */
     TlvPacket(char type, char *value, int valueLength)
         :tlvType(type), tlvValue(value), tlvLength(valueLength)
     {
